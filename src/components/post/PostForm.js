@@ -33,7 +33,7 @@
         const handleClickSavePost = (event) => {
             event.preventDefault() //Prevents the browser from submitting the for
             addPost(post)
-            // .then(() => history.push("/posts"))
+            .then(() => history.push("/posts"))
         }
     
 
