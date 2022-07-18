@@ -3,6 +3,7 @@ import { Route } from "react-router-dom"
 import { Post } from "./post/Post"
 import { PostList } from "./post/PostList"
 import { PostForm } from "./post/PostForm"
+import { PostEditForm } from "./post/PostEditForm"
 
 export const ApplicationViews = () => {
 
@@ -14,6 +15,9 @@ export const ApplicationViews = () => {
       </Route>
       <Route exact path="/posts/postform">
         <PostForm />
+      </Route>
+      <Route exact path="/posts/:postId/edit">
+        <PostEditForm />
       </Route>
     </>
   )

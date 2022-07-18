@@ -42,6 +42,17 @@ export const addPost = (newPost) => {
     }).then(res => res.json())
 }
 
+export const updatePost = (post, id) => {
+    return fetch(`${rareApiUrl}/posts/${id}`, {
+        method: "PUT",
+        headers: {
+            "Authorization": rareToken,
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(post)
+    })
+}
+
 export const getCategories = () => {
     return fetch(`${rareApiUrl}/categories`, {
         headers: {
