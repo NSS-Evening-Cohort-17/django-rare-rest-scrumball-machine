@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 
 export const PostCard = ({post, delPost}) => {
 
@@ -17,6 +18,10 @@ export const PostCard = ({post, delPost}) => {
                     <p><b>Arthur:</b> {post.rareuser.user.first_name}</p>
                     <p>{post.category.label}</p>
                 </div>
+                <button className="postBtn" id="postEditBtn">
+                    <Link to={`/posts/${post.id}/edit`}>Edit Post
+                    </Link>
+                </button>
             </div>
         </>
     )
